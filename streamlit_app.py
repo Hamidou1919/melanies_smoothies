@@ -47,7 +47,7 @@ if ingredients_list:
           print('search_on is not null ', search_on)
           
         st.subheader(fruit_chosen + ' Nutrition Information')
-        fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + api_call)
+        fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + search_on)
         fv_dv = st.dataframe(data=fruityvice_response.json(), use_container_width =True)
 
         
