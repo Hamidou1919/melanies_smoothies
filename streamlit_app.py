@@ -43,7 +43,7 @@ if ingredients_list:
         
         if search_on :
           api_call = fruit_chosen
-        else 
+        else :
           api_call = search_on
           
         st.subheader(fruit_chosen + ' Nutrition Information')
