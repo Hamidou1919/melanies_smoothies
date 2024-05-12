@@ -42,12 +42,12 @@ if ingredients_list:
         st.write('The search value for ', fruit_chosen,' is ', search_on, '.')
         
         if search_on :
-          st.write('search_on is null', search_on)
+          api_call = search_on
         else :
-          st.write('search_on is not null ', search_on)
+          api_call = fruit_chosen
           
         st.subheader(fruit_chosen + ' Nutrition Information')
-        fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + search_on)
+        fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + api_call)
         fv_dv = st.dataframe(data=fruityvice_response.json(), use_container_width =True)
 
         
